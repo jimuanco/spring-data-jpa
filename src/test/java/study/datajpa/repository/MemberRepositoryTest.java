@@ -274,4 +274,9 @@ class MemberRepositoryTest {
         //when
         List<Member> result = memberRepository.findLockByUsername("member1");
     }
+
+    @Test
+    public void callCustom() {
+        List<Member> result = memberRepository.findMemberCustom(); //Spring Data JPA가 알아서 호출해줌
+    }
 }
